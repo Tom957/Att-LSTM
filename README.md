@@ -23,48 +23,61 @@ prove the generalization and practicality of the novel architecture, we design a
 ### Usage
 
 - <b>Training Models</b>
-  * Add problem usage `python test_add.py`
-  * Options
-      - `batch_size`: Batch Size. Default is 20.
-      - `step_size`: the length of input, which is called T in my paper. The value check in {100,200,400,600}.
+  * Add problem usage 
+  ```
+  python test_add.py
+  ```
+  * Mian Options
+      - `batch_size`: Batch size. Default is 20.
+      - `step_size`: The length of input, which is called T in my paper. The value check in {100,200,400,600}.
       - `input_size`: Dimension of input. Default is 2.
       - `output_size`: Dimension of output. Default is 1.
-      - `unit_size`:  the number of hidden unit. Default is 100.
-      - `learning_rate`: Learning Rate. Default is 0.001.
+      - `unit_size`:  The number of hidden unit. Default is 100.
+      - `learning_rate`: Learning rate. Default is 0.001.
       - `epoch_num`: Max number of epochs. Default is 600.
       - `cell_name`: Three cell can be choiced, including rnn, lstm, arnn
       - `K`: Hyperparameter for the Att-LSTM, Default is 4.
-   * MNIST usage `python test_mnist.py` and pMNIST usage `python test_pmnist.py` 
+   * MNIST usage 
+   ```
+   python test_mnist.py
+   ```
+   * pMNIST usage 
+   ```
+   python test_pmnist.py
+   ```
+   * Their Mian Options
       - `batch_size`: Batch Size. Default is 100.
-      - `step_size`: the length of input. The value number of pixel.Default is 784.
+      - `step_size`: The length of input. The value number of pixel.Default is 784.
       - `input_size`: Dimension of input. Default is 1.
       - `class_num`: Dimension of output. Default is 10.
-      - `unit_size`:  the number of hidden unit. Default is 1000.
+      - `unit_size`:  The number of hidden unit. Default is 1000.
       - `learning_rate`: Learning Rate. Default is 0.001.
+      - `clip_value`: Clip gradient and avoid gradient explosion. Default is 1.0.
       - `epoch_num`: Max number of epochs. Default is 600.
-      - `cell_name`: Three cell can be choiced, including lstm, arnn
+      - `cell_name`: Two cell can be choiced, including lstm, arnn
       - `K`: Hyperparameter for the Att-LSTM, Default is 8.
-    * Question classifica他ion usage `python test_hierqc.py
+    * Question classification usage `
+    '''
+    python test_hierqc.py
+    '''
+    * Mian Options
       - `batch_size`: Batch Size. Default is 100.
-      - `step_size`: the length of input. The value number of pixel.Default is 784.
-      - `input_size`: Dimension of input. Default is 1.
-      - `class_num`: Dimension of output. Default is 10.
-      - `unit_size`:  the number of hidden unit. Default is 1000.
-      - `learning_rate`: Learning Rate. Default is 0.001.
+      - `data_type`: Two dataset be choiced, including trec, msqc
+      - `char_embed_dim`: Dimension of input. Default is 1.
+      - `first_unit_size`:  The number of low-level Att-LSTM hidden unit. Default is 40.
+      - `secod_unit_size`:  The number of high-level Att-LSTM hidden unit. Default is 40.
+      - `learning_rate`: Learning Rate. Default is 0.0001.
+      - `clip_norm`: Clip gradient and avoid gradient explosion. Default is 10.0.
       - `epoch_num`: Max number of epochs. Default is 600.
-      - `cell_name`: Three cell can be choiced, including lstm, arnn
-      - `K`: Hyperparameter for the Att-LSTM, Default is 8.
+      - `cell_name`: Two cell can be choiced, including lstm, arnn
+      - `K`: Hyperparameter for the Att-LSTM, Default is 2.
       
 - <b>Ploting Results</b>
+
   * Write the captions in text file, and save it as ```Data/sample_captions.txt```. Generate the skip thought vectors for these captions using:
   ```
-  python generate_thought_vectors.py --caption_file="Data/sample_captions.txt"
+  python plot.py
   ```
-  * Generate the Images for the thought vectors using:
-  ```
-  python generate_images.py --model_path=<path to the trained model> --n_images=8
-  ```
-   ```n_images``` specifies the number of images to be generated per caption. The generated images will be saved in ```Data/val_samples/```. ```python generate_images.py --help``` for more options.
 
 
 ### The Results
