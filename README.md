@@ -22,7 +22,7 @@ prove the generalization and practicality of the novel architecture, we design a
 
 ### Usage
 
-- <b>Training</b>
+- <b>Training Models</b>
   * Add problem usage `python test_add.py`
   * Options
       - `batch_size`: Batch Size. Default is 20.
@@ -34,30 +34,28 @@ prove the generalization and practicality of the novel architecture, we design a
       - `epoch_num`: Max number of epochs. Default is 600.
       - `cell_name`: Three cell can be choiced, including rnn, lstm, arnn
       - `K`: Hyperparameter for the Att-LSTM, Default is 4.
+   * MNIST usage `python test_mnist.py` and pMNIST usage `python test_pmnist.py` 
+      - `batch_size`: Batch Size. Default is 100.
+      - `step_size`: the length of input. The value number of pixel.Default is 784.
+      - `input_size`: Dimension of input. Default is 1.
+      - `class_num`: Dimension of output. Default is 10.
+      - `unit_size`:  the number of hidden unit. Default is 1000.
+      - `learning_rate`: Learning Rate. Default is 0.001.
+      - `epoch_num`: Max number of epochs. Default is 600.
+      - `cell_name`: Three cell can be choiced, including lstm, arnn
+      - `K`: Hyperparameter for the Att-LSTM, Default is 8.
+    * Question classifica他ion usage `python test_hierqc.py
+      - `batch_size`: Batch Size. Default is 100.
+      - `step_size`: the length of input. The value number of pixel.Default is 784.
+      - `input_size`: Dimension of input. Default is 1.
+      - `class_num`: Dimension of output. Default is 10.
+      - `unit_size`:  the number of hidden unit. Default is 1000.
+      - `learning_rate`: Learning Rate. Default is 0.001.
+      - `epoch_num`: Max number of epochs. Default is 600.
+      - `cell_name`: Three cell can be choiced, including lstm, arnn
+      - `K`: Hyperparameter for the Att-LSTM, Default is 8.
       
-      - parser.add_argument("--data_type",type=str, default="trec")
-      - parser.add_argument("--epoch_num",type=int, default=300)
-      - parser.add_argument("--batch_size",type=int, default=100)
-      - parser.add_argument("--max_sent_len",type=int, default=20)
-      - parser.add_argument("--max_word_len",type=int, default=16)
-      - parser.add_argument("--char_embed_dim",type=int, default=20)
-      - parser.add_argument("--first_unit_size",type=int, default=40)
-    parser.add_argument("--secod_unit_size",type=int, default=40)
-    parser.add_argument("--highway_layers",type=int, default=1)
-    parser.add_argument("--learning_rate",type=float, default=1.0e-4)
-    parser.add_argument("--learning_rate_decay",type=int, default=1)
-    parser.add_argument("--reg_lambda",type=float, default=0.1)
-    parser.add_argument("--clip_norm",type=float, default=10.0)
-    parser.add_argument("--cell_name",type=str, default="arnn")
-    parser.add_argument("--K",type=int, default=2)
-
-    parser.add_argument("--is_test",type=bool, default=False)
-    parser.add_argument("--ckp_dir",type=str, default='checkpoint')
-    parser.add_argument("--ckp_name",type=str, default='100.pkl')
-    parser.add_argument("--result_dir",type=str, default="result")
-    parser.add_argument("--test_per_batch",type=int, default=-1)
-      
-- <b>Generating Images from Captions</b>
+- <b>Ploting Results</b>
   * Write the captions in text file, and save it as ```Data/sample_captions.txt```. Generate the skip thought vectors for these captions using:
   ```
   python generate_thought_vectors.py --caption_file="Data/sample_captions.txt"
