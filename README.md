@@ -23,11 +23,8 @@ prove the generalization and practicality of the novel architecture, we design a
 ### Usage
 
 - <b>Training Models</b>
-  * Add problem usage 
-  ```
-  python test_add.py
-  ```
-  * Mian Options
+  * Add problem usage ```python test_add.py```
+      - <b>Mian Options</b>
       - `batch_size`: Batch size. Default is 20.
       - `step_size`: The length of input, which is called T in my paper. The value check in {100,200,400,600}.
       - `input_size`: Dimension of input. Default is 2.
@@ -37,15 +34,8 @@ prove the generalization and practicality of the novel architecture, we design a
       - `epoch_num`: Max number of epochs. Default is 600.
       - `cell_name`: Three cell can be choiced, including rnn, lstm, arnn
       - `K`: Hyperparameter for the Att-LSTM, Default is 4.
-   * MNIST usage 
-   ```
-   python test_mnist.py
-   ```
-   * pMNIST usage 
-   ```
-   python test_pmnist.py
-   ```
-   * Their Mian Options
+  * MNIST usage  ``` python test_mnist.py ```and pMNIST usage ```python test_pmnist.py```
+      - <b>Mian Options</b>
       - `batch_size`: Batch Size. Default is 100.
       - `step_size`: The length of input. The value number of pixel.Default is 784.
       - `input_size`: Dimension of input. Default is 1.
@@ -56,11 +46,8 @@ prove the generalization and practicality of the novel architecture, we design a
       - `epoch_num`: Max number of epochs. Default is 600.
       - `cell_name`: Two cell can be choiced, including lstm, arnn
       - `K`: Hyperparameter for the Att-LSTM, Default is 8.
-    * Question classification usage `
-    '''
-    python test_hierqc.py
-    '''
-    * Mian Options
+  * Question classification usage ``` python test_hierqc.py```
+      - <b>Mian Options</b>
       - `batch_size`: Batch Size. Default is 100.
       - `data_type`: Two dataset be choiced, including trec, msqc
       - `char_embed_dim`: Dimension of input. Default is 1.
@@ -74,10 +61,7 @@ prove the generalization and practicality of the novel architecture, we design a
       
 - <b>Ploting Results</b>
 
-  * Write the captions in text file, and save it as ```Data/sample_captions.txt```. Generate the skip thought vectors for these captions using:
-  ```
-  python plot.py
-  ```
+  * All of test results are saved to the "result" folder, and each task has a corresponding folder. We just run the plot script: ``` python plot.py ```
 
 
 ### The Results
