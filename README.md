@@ -14,17 +14,59 @@ prove the generalization and practicality of the novel architecture, we design a
 - [Tensorflow 0.12][1]
 
 ### Datasets
-- Adding Problem was proposed by Hochreiter & Schmidhuber.
-- A sequential version of the handwritten digit classification (MNIST).
+- Adding Problem was proposed by Hochreiter & Schmidhuber, and the dataset is create randomly. 
+- A sequential version of the handwritten digit classification (MNIST), which is downloaded by tensorflow.
 - [TREC][2] dataset that is the most common question classification.
 - MSQC dataset is extracted from [Microsoft Research Question-Answering Corpus][3].
 
 
 ### Usage
-- <b>Data Processing</b> : Extract the skip thought vectors for the flowers data set using :
-```
-python test_add.py # test 
-```
+
+- <b>Training</b>
+  * Add problem usage `python test_add.py`
+  * Options
+      - `batch_size`: Batch Size. Default is 20.
+      - `step_size`: the length of input, which is called T in my paper. The value check in {100,200,400,600}.
+      - `input_size`: Dimension of input. Default is 2.
+      - `output_size`: Dimension of output. Default is 1.
+      - `unit_size`:  the number of hidden unit. Default is 100.
+      - `learning_rate`: Learning Rate. Default is 0.001.
+      - `epoch_num`: Max number of epochs. Default is 600.
+      - `cell_name`: Three cell can be choiced, including rnn, lstm, arnn
+      - `K`: Hyperparameter for the Att-LSTM, Default is 4.
+      
+      - parser.add_argument("--data_type",type=str, default="trec")
+      - parser.add_argument("--epoch_num",type=int, default=300)
+      - parser.add_argument("--batch_size",type=int, default=100)
+      - parser.add_argument("--max_sent_len",type=int, default=20)
+      - parser.add_argument("--max_word_len",type=int, default=16)
+      - parser.add_argument("--char_embed_dim",type=int, default=20)
+      - parser.add_argument("--first_unit_size",type=int, default=40)
+    parser.add_argument("--secod_unit_size",type=int, default=40)
+    parser.add_argument("--highway_layers",type=int, default=1)
+    parser.add_argument("--learning_rate",type=float, default=1.0e-4)
+    parser.add_argument("--learning_rate_decay",type=int, default=1)
+    parser.add_argument("--reg_lambda",type=float, default=0.1)
+    parser.add_argument("--clip_norm",type=float, default=10.0)
+    parser.add_argument("--cell_name",type=str, default="arnn")
+    parser.add_argument("--K",type=int, default=2)
+
+    parser.add_argument("--is_test",type=bool, default=False)
+    parser.add_argument("--ckp_dir",type=str, default='checkpoint')
+    parser.add_argument("--ckp_name",type=str, default='100.pkl')
+    parser.add_argument("--result_dir",type=str, default="result")
+    parser.add_argument("--test_per_batch",type=int, default=-1)
+      
+- <b>Generating Images from Captions</b>
+  * Write the captions in text file, and save it as ```Data/sample_captions.txt```. Generate the skip thought vectors for these captions using:
+  ```
+  python generate_thought_vectors.py --caption_file="Data/sample_captions.txt"
+  ```
+  * Generate the Images for the thought vectors using:
+  ```
+  python generate_images.py --model_path=<path to the trained model> --n_images=8
+  ```
+   ```n_images``` specifies the number of images to be generated per caption. The generated images will be saved in ```Data/val_samples/```. ```python generate_images.py --help``` for more options.
 
 
 ### The Results
