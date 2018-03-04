@@ -26,25 +26,25 @@ prove the generalization and practicality of the novel architecture, we design a
   * Add problem usage ```python test_add.py```
       - <b>Mian Options</b>
       - `batch_size`: Batch size. Default is 20.
-      - `step_size`: The length of input, which is called T in my paper. The value check in {100,200,400,600}.
+      - `step_size`: The length of input, which is called T in my paper. The value is checked in {100,200,400,600}.
       - `input_size`: Dimension of input. Default is 2.
       - `output_size`: Dimension of output. Default is 1.
       - `unit_size`:  The number of hidden unit. Default is 100.
       - `learning_rate`: Learning rate. Default is 0.001.
       - `epoch_num`: Max number of epochs. Default is 600.
-      - `cell_name`: Three cell can be choiced, including rnn, lstm, arnn
-      - `K`: Hyperparameter for the Att-LSTM, Default is 4.
+      - `cell_name`: Three cell can be choiced, including rnn, lstm, arnn.  Default is arnn.
+      - `K`: Hyperparameter for the Att-LSTM. Default is 4.
   * MNIST usage  ``` python test_mnist.py ```and pMNIST usage ```python test_pmnist.py```
       - <b>Mian Options</b>
       - `batch_size`: Batch Size. Default is 100.
-      - `step_size`: The length of input. The value number of pixel.Default is 784.
+      - `step_size`: The length of input. The value number of pixel. Default is 784.
       - `input_size`: Dimension of input. Default is 1.
       - `class_num`: Dimension of output. Default is 10.
       - `unit_size`:  The number of hidden unit. Default is 1000.
       - `learning_rate`: Learning Rate. Default is 0.001.
       - `clip_value`: Clip gradient and avoid gradient explosion. Default is 1.0.
       - `epoch_num`: Max number of epochs. Default is 600.
-      - `cell_name`: Two cell can be choiced, including lstm, arnn
+      - `cell_name`: Two cell can be choiced, including lstm, arnn.  Default is arnn.
       - `K`: Hyperparameter for the Att-LSTM, Default is 8.
   * Question classification usage ``` python test_hierqc.py```
       - <b>Mian Options</b>
@@ -56,7 +56,7 @@ prove the generalization and practicality of the novel architecture, we design a
       - `learning_rate`: Learning Rate. Default is 0.0001.
       - `clip_norm`: Clip gradient and avoid gradient explosion. Default is 10.0.
       - `epoch_num`: Max number of epochs. Default is 300.
-      - `cell_name`: Two cell can be choiced, including lstm, arnn
+      - `cell_name`: Two cell can be choiced, including lstm, arnn.  Default is arnn.
       - `K`: Hyperparameter for the Att-LSTM, Default is 2.
       
 - <b>Ploting Results</b>
