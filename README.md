@@ -49,13 +49,13 @@ prove the generalization and practicality of the novel architecture, we design a
   * Question classification usage ``` python test_hierqc.py```
       - <b>Mian Options</b>
       - `batch_size`: Batch Size. Default is 100.
-      - `data_type`: Two dataset be choiced, including trec, msqc
-      - `char_embed_dim`: Dimension of input. Default is 1.
+      - `data_type`: Two dataset be choiced, including trec, msqc. Default is trec
+      - `char_embed_dim`: Dimension of input. Default is 20.
       - `first_unit_size`:  The number of low-level Att-LSTM hidden unit. Default is 40.
       - `secod_unit_size`:  The number of high-level Att-LSTM hidden unit. Default is 40.
       - `learning_rate`: Learning Rate. Default is 0.0001.
       - `clip_norm`: Clip gradient and avoid gradient explosion. Default is 10.0.
-      - `epoch_num`: Max number of epochs. Default is 600.
+      - `epoch_num`: Max number of epochs. Default is 300.
       - `cell_name`: Two cell can be choiced, including lstm, arnn
       - `K`: Hyperparameter for the Att-LSTM, Default is 2.
       
