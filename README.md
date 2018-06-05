@@ -1,7 +1,3 @@
-## Novel Architecture for Long Short-Term Memory Used in Question Classification
-In this paper, we propose a novel architecture (Att-LSTM) for basic LSTM that connects continuous hidden states of previous time steps to the current time step and applies an attention mechanism to these hidden states. This architecture can not only capture local features effectively but also help learn very long-distance correlations in an input sequence. We evaluate Att-LSTM in various sequential tasks, such as adding problem, sequence classification, and character-level language modeling. In addition, to
-prove the generalization and practicality of the novel architecture, we design a character-level hierarchical Att-LSTM and refine the word representation with a highway network. This hierarchical model achieved excellent performance on question classification.
-
 - <b>The schematic of the Att-LSTM </b>  
 ![Model architecture](https://github.com/Tom957/Att-LSTM/blob/master/images/attlstm.jpg)
 
