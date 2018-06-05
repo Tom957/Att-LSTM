@@ -1,4 +1,4 @@
-## Novel Architecture for Long Short-Term Memory
+## Att-LSTM
 
 - <b>The schematic of the Att-LSTM </b>  
 ![Model architecture](https://github.com/Tom957/Att-LSTM/blob/master/images/attlstm.jpg)
