@@ -74,46 +74,6 @@
 | ------------- | -----:|
 | ![](https://github.com/Tom957/Att-LSTM/blob/master/images/MNIST.jpg)        | ![](https://github.com/Tom957/Att-LSTM/blob/master/images/pMNIST.jpg)   |
 
-
-- <b> The accuracy on the TREC dataset</b> 
-  * Test [01]: losses 0.013709, accuracys 0.566000
-  * Test [02]: losses 0.009345, accuracys 0.762000
-  * Test [03]: losses 0.005961, accuracys 0.836000
-  * Test [04]: losses 0.003982, accuracys 0.884000
-  * Test [05]: losses 0.003035, accuracys 0.904000
-  * Test [06]: losses 0.002376, accuracys 0.918000
-  * Test [07]: losses 0.002002, accuracys 0.928000
-  * Test [08]: losses 0.001678, accuracys 0.940000
-  * Test [09]: losses 0.001473, accuracys 0.954000
-  * Test [10]: losses 0.001301, accuracys 0.958000
-  * Test [11]: losses 0.001185, accuracys 0.958000
-  * Test [12]: losses 0.001067, accuracys 0.960000
-  * Test [13]: losses 0.000984, accuracys 0.968000
-  * Test [14]: losses 0.000884, accuracys 0.970000
-  * Test [15]: losses 0.000830, accuracys 0.972000
-  * Test [16]: losses 0.000769, accuracys 0.974000
-  * Test [17]: losses 0.000802, accuracys 0.972000
-  * Test [18]: losses 0.000836, accuracys 0.970000
-  * Test [19]: losses 0.000769, accuracys 0.972000
-  * Test [20]: losses 0.000783, accuracys 0.972000
-  * Test [21]: losses 0.000828, accuracys 0.970000
-  * Test [22]: losses 0.000886, accuracys 0.968000
-  * Test [23]: losses 0.000972, accuracys 0.962000
-  * Test [24]: losses 0.000848, accuracys 0.970000
-  * Test [25]: losses 0.000815, accuracys 0.968000
-  * Test [26]: losses 0.000819, accuracys 0.968000
-  * Test [27]: losses 0.000680, accuracys 0.980000
-  * Test [28]: losses 0.000663, accuracys 0.982000
-  * Test [29]: losses 0.000637, accuracys 0.980000
-  * Test [30]: losses 0.000626, accuracys 0.980000
-  * Test [31]: losses 0.000620, accuracys 0.980000
-  * Test [32]: losses 0.000620, accuracys 0.980000
-  * Test [33]: losses 0.000617, accuracys 0.980000
-  * Test [34]: losses 0.000617, accuracys 0.982000
-  * Test [35]: losses 0.000614, accuracys 0.980000
-  * Test [36]: losses 0.000618, accuracys 0.982000
-  * Test [37]: losses 0.000616, accuracys 0.980000
-  * ......
   
 - <b> The accuracy on the MSQC dataset</b> 
   * Test [01]: losses 0.003270, accuracys 0.893542
